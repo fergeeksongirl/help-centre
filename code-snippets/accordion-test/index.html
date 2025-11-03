@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create a CSV File — Accessible Accordion</title>
+  <link rel="stylesheet" href="./app.css" />
+</head>
+<body>
+  <main>
+    <h1>Create a CSV File</h1>
+    <p>
+      Select the section that matches the tool you’re using. This accordion is fully accessible,
+      keyboard-friendly, and should preview correctly in Chrome and Safari.
+    </p>
+
+    <!-- Native HTML accordion -->
+    <section class="accordion" aria-label="CSV export instructions">
+      <details class="acc-item">
+        <summary class="acc-summary">Microsoft Excel</summary>
+        <div class="acc-panel">
+          <p>
+            Steps to export as CSV from Excel. Remember that CSV stores only raw data—formulas and
+            formatting are not included.
+          </p>
+        </div>
+      </details>
+
+      <details class="acc-item">
+        <summary class="acc-summary">Google Sheets</summary>
+        <div class="acc-panel">
+          <p>
+            Steps to download as CSV from Google Sheets. Ideal for uploading data to Edwin or other
+            compatible tools.
+          </p>
+        </div>
+      </details>
+
+      <details class="acc-item">
+        <summary class="acc-summary">Text Editor</summary>
+        <div class="acc-panel">
+          <p>
+            To create a CSV manually, separate values with commas and save the file with a
+            <code>.csv</code> extension.
+          </p>
+        </div>
+      </details>
+    </section>
+
+    <noscript>
+      <p class="nojs-note">
+        JavaScript is disabled, so multiple sections can be open at once. All content remains
+        accessible.
+      </p>
+    </noscript>
+  </main>
+
+  <script src="./app.js" defer></script>
+</body>
+</html>
