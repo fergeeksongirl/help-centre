@@ -1,0 +1,86 @@
+/* ---------- Base ---------- */
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  margin: 0;
+  padding: 2rem;
+  color: #222;
+}
+
+main {
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+/* ---------- Accordion ---------- */
+.accordion {
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.acc-item + .acc-item {
+  border-top: 1px solid #e5e5e5;
+}
+
+.acc-summary {
+  list-style: none;
+  padding: 1rem 3rem 1rem 1rem;
+  cursor: pointer;
+  position: relative;
+  font-weight: 600;
+  background: #f8f8f8;
+  transition: background 0.2s ease-in-out;
+}
+
+.acc-summary::-webkit-details-marker {
+  display: none;
+}
+
+/* + / – indicator */
+.acc-summary::after {
+  content: "+";
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+
+.acc-item[open] > .acc-summary::after {
+  content: "–";
+}
+
+/* Hover and focus styles */
+.acc-summary:hover {
+  background: #f1f7ff;
+}
+
+.acc-summary:focus-visible {
+  outline: 3px solid #005fcc;
+  outline-offset: 2px;
+}
+
+.acc-panel {
+  padding: 1rem;
+  background: #fff;
+  border-top: 1px solid #e5e5e5;
+}
+
+/* ---------- No-JS Note ---------- */
+.nojs-note {
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  background: #eef6ff;
+  border: 1px solid #b3d4ff;
+  border-radius: 6px;
+}
+
+/* ---------- Reduced Motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
